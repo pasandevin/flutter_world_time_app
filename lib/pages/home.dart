@@ -13,21 +13,29 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: SafeArea(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Container(
-              width: 180.0,
-              child: MaterialButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/location');
-                },
-                child: Row(children: <Widget>[
-                  Text('Choose Location'),
-                  Icon(Icons.arrow_forward),
-                ]
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  width: 169.0,
+
+                  child: MaterialButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/location');
+                    },
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                      Text('Choose Location'),
+                      Icon(Icons.arrow_forward),
+                    ]
+                    ),
+                    color: Colors.blue,
+                  ),
                 ),
-                color: Colors.blue,
-              ),
+              ],
             ),
           ],
         ),

@@ -8,8 +8,15 @@ class ChooseLocation extends StatefulWidget {
 }
 
 class _ChooseLocationState extends State<ChooseLocation> {
+
+  @override
+  void initState() {
+    super.initState();
+    print("initState ran");
+  }
   @override
   Widget build(BuildContext context) {
+    print("build ran");
     return Scaffold(
       body: Text('ChooseLocation'),
       appBar: AppBar(
