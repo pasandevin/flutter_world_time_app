@@ -21,32 +21,55 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  width: 169.0,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(0, 120.0, 0, 0),
+          child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    width: 169.0,
 
-                  child: MaterialButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/location');
-                    },
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                      Text('Choose Location'),
-                      Icon(Icons.arrow_forward),
-                    ]
+                    child: MaterialButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/location');
+                      },
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                        Text('Choose Location'),
+                        Icon(Icons.arrow_forward),
+                      ]
+                      ),
+                      color: Colors.blue,
                     ),
-                    color: Colors.blue,
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+              SizedBox(height: 20.0,),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                      data['location'],
+                    style: TextStyle(
+                      fontSize: 28.0,
+                      letterSpacing: 2.0,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20.0,),
+              Text(
+                  data['time'],
+              style: TextStyle(
+                  fontSize: 66.0,
+
+              )),
+            ],
+          ),
         ),
       ),
     );
